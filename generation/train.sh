@@ -5,7 +5,7 @@ data_dir="$repo_path/demo_data/"
 save_dir="$repo_path/model/"
 mkdir -p $save_dir
 
-python train.py \
+python3 train.py \
     --train_src_file $data_dir/train_demo.tok.clean.lc.context \
     --train_trg_file $data_dir/train_demo.tok.clean.lc.response \
     --train_fact_file $data_dir/train_demo.tok.clean.lc.fact \

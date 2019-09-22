@@ -5,7 +5,7 @@ data_dir="$repo_path/demo_data/"
 save_dir="$repo_path/model/"
 mkdir -p $save_dir
 
-python test.py \
+python3 test.py \
     --test_src_file $data_dir/test.tok.lc.context \
     --test_trg_file $data_dir/test.tok.lc.response \
     --test_fact_file $data_dir/test.tok.lc.fact \
