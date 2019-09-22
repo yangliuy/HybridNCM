@@ -17,7 +17,7 @@ Bibtext
 ```
 
 # Generation Module
-=================
+
 Implemented by [Junjie Hu](http://www.cs.cmu.edu/~junjieh/)
 
 Contact: junjieh@cs.cmu.edu
