@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 This folder contains the implementation of the generation module of the hybrid neural conversation model proposed in the CIKM'19 paper "A Hybrid Retrieval-Generation Neural Conversation Model".
 
@@ -16,7 +16,7 @@ Bibtext
 }
 ```
 
-Generation Module
+# Generation Module
 =================
 Implemented by [Junjie Hu](http://www.cs.cmu.edu/~junjieh/)
 
