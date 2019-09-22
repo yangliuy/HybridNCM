@@ -21,7 +21,7 @@ Bibtext
 
 ## Organization of the Code Repository
 ### Data Set
-We can not open source the Twitter/ Foursqure data used in our CIKM 2019 paper since it is an internal data set in Microsoft Research. To demo how to train and test the model, we provide demo data generated based on the [Ubuntu Dialog Corpus](https://arxiv.org/abs/1506.08909) data in the folder HybridNCM/demo_data. You can easily adapt these instructions to other data sets in your lab or company.
+We can not open source the Twitter/ Foursqure data used in our CIKM 2019 paper since it is an internal data set in Microsoft Research. To demo how to train and test the model, we provide demo data generated based on the [Ubuntu Dialog Corpus](https://arxiv.org/abs/1506.08909) data in the folder HybridNCM/demo_data. You can easily adapt these instructions to other data sets in your lab or company. The demo data set can be downloaded from this [Google Drive folder](https://drive.google.com/drive/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq?usp=sharing).
 
 ### Code for the Generation Module
 The code for the generation module can be found in the folder HybridNCM/generation. It contains the implementation of the Seq2Seq model and Seq2Seq-Facts with Pytorch for response generation. Please check the readme file for this module for the details.

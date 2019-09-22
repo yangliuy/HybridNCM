@@ -31,8 +31,7 @@ Bibtext
 
 We can not open source the Twitter/ Foursqure data used in our CIKM 2019 paper since it is an internal data set in Microsoft Research. To demo how to train and test the hybrid rankin module, we provide demo data generated based on the [Ubuntu Dialog Corpus](https://arxiv.org/abs/1506.08909) data in the folder HybridNCM/demo_data. You can easily adapt these instructions to other data sets in your lab or company.
 
-* Step 1: Download and prepare the input data for the hybrid ranking module. you can download the Ubuntu Dialog Corpus(UDC) demo data from
-[the Google Drive folder](https://drive.google.com/drive/u/0/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq). This folder contains the processed context/response/facts for the train/dev/test data generated from the UDC data sets to train the Seq2Seq and Seq2Seq-Fact models. It also contains the generated responses and retrieved responses for the train/dev/test data, which can be input of the hybrid ranking module.
+* Step 1: Download and prepare the input data for the hybrid ranking module. you can download the Ubuntu Dialog Corpus(UDC) demo data from [Google Drive folder](https://drive.google.com/drive/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq?usp=sharing). This folder contains the processed context/response/facts for the train/dev/test data generated from the UDC data sets to train the Seq2Seq and Seq2Seq-Fact models. It also contains the generated responses and retrieved responses for the train/dev/test data, which can be input of the hybrid ranking module.
 
 * Step 2: Mix the retrieved responses and generated responses for the same dialog context. Compute the distant supervision scores for response candidates like BLUE-1, BLEU-2 or ROUGE-L. The script hybrid_ranking/matchzoo/conqa/transfer_to_mz_format_hncm_hybrid_ranking.py will help you do these steps.
 
@@ -64,7 +63,7 @@ optional arguments:
 
 ```
 
-all of the input files like ret_res_file, gen_res_file, context_file, response_file has been uploaded to [the Google Drive folder](https://drive.google.com/drive/u/0/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq). You can set mz_model_input_folder as the input data folder of [MatchZoo](https://github.com/NTMC-Community/MatchZoo) in your workspace.
+all of the input files like ret_res_file, gen_res_file, context_file, response_file has been uploaded to the [Google Drive folder](https://drive.google.com/drive/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq?usp=sharing). You can set mz_model_input_folder as the input data folder of [MatchZoo](https://github.com/NTMC-Community/MatchZoo) in your workspace.
 
 * Step 3: Transfer the raw distant supervision score to the binary label for the training of re-ranker. Rank the response candidates according to the distant supervision score and select top K resopnse candidates as the positive response candidates and the other response candidates are the negative candidates. The script hybrid_ranking/matchzoo/conqa/transfer_to_mz_format_hncm_binary_label.py will help you do these steps.
 
@@ -99,7 +98,7 @@ optional arguments:
 
 ```
 
-* Step 4: Run data preprocessing steps in the MatchZoo toolkit. We process the input data train.mz/valid.mz/test.mz files and generate the relation files, corpus files, word dictionay files and preprocessed corpus files. Users can refer to the readme files of [MatchZoo](https://github.com/NTMC-Community/MatchZoo/tree/1.0) and [NeuralResponseRanking](https://github.com/yangliuy/NeuralResponseRanking) for all the details on how to do the data preprocessing for MatchZoo. To generate the relation files, corpus files, word dictionay files and preprocessed corpus files, you can refer to hybrid_ranking/matchzoo/conqa/preprocess_hncm.py. We used the pretrained Glove embedding. To generate the filtered version of Glove embedding file, you can refer to hybrid_ranking/matchzoo/conqa/gen_w2v_filtered.py. We uploaded some processed files into [the Google Drive folder](https://drive.google.com/drive/u/0/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq) to help you understand the input files and output files in this step. Note that these files are generated based on the UDC data and only for demo purpose.
+* Step 4: Run data preprocessing steps in the MatchZoo toolkit. We process the input data train.mz/valid.mz/test.mz files and generate the relation files, corpus files, word dictionay files and preprocessed corpus files. Users can refer to the readme files of [MatchZoo](https://github.com/NTMC-Community/MatchZoo/tree/1.0) and [NeuralResponseRanking](https://github.com/yangliuy/NeuralResponseRanking) for all the details on how to do the data preprocessing for MatchZoo. To generate the relation files, corpus files, word dictionay files and preprocessed corpus files, you can refer to hybrid_ranking/matchzoo/conqa/preprocess_hncm.py. We used the pretrained Glove embedding. To generate the filtered version of Glove embedding file, you can refer to hybrid_ranking/matchzoo/conqa/gen_w2v_filtered.py. We uploaded some processed files into [the Google Drive folder](https://drive.google.com/drive/folders/14kp-q1nre-mKjO4ExfXAVyhuGK3woxsq?usp=sharing) to help you understand the input files and output files in this step. Note that these files are generated based on the UDC data and only for demo purpose.
 
 #### Training ####
 
