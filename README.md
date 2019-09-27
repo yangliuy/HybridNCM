@@ -29,7 +29,7 @@ The code for the generation module can be found in the folder HybridNCM/generati
 ### Code for the Retrieval Module
 The code for the retrieval module can be found in the folder HybridNCM/retrieval. The implementation of building search index and BM25 retrieval is based on [Lucene](https://lucene.apache.org/).
 
-### Code for the Hybird Ranking Module
+### Code for the Hybrid Ranking Module
 The code for the hybrid ranking module can be found in the folder HybridNCM/hybrid_ranking. The implementation of the neural ranking model is based on [MatchZoo](https://github.com/NTMC-Community/MatchZoo). Please check the readme file for this module for the details.
 
 ## Contact information
